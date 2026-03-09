@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ascone-primary: #1c3f3a;
+  --ascone-light-grey: #e0eae8;
+  --ascone-cream: #ebe8d8;
+  --ascone-navy: #0a0c29;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
