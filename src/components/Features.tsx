@@ -3,15 +3,6 @@
 import { motion } from "framer-motion";
 import { Card } from "./Card";
 
-const blockVariants = {
-  hidden: { opacity: 0, y: 24 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.12, duration: 0.45 },
-  }),
-};
-
 function IconBox() {
   return (
     <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-white/20">
@@ -53,13 +44,7 @@ export function Features() {
         </motion.div>
 
         <div className="mt-16 grid gap-8 lg:grid-cols-3">
-          <motion.div
-            variants={blockVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-40px" }}
-            className="rounded-2xl bg-ascone-primary p-8 text-white"
-          >
+          <div className="rounded-2xl bg-ascone-primary p-8 text-white">
             <h3 className="text-xl font-semibold">Grow savings faster</h3>
             <div className="mt-6 flex justify-center">
               <div className="flex flex-col items-center gap-2">
@@ -71,16 +56,10 @@ export function Features() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            variants={blockVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-40px" }}
-            className="rounded-2xl bg-ascone-cream/80 p-8"
-          >
-            <h3 className="text-xl font-semibold text-ascone-navy">Send across the global</h3>
+          <div className="rounded-2xl bg-ascone-cream/80 p-8">
+            <h3 className="text-xl font-semibold text-ascone-navy">Send across the globe</h3>
             <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
               <div className="rounded-lg bg-white px-4 py-2 shadow-sm">
                 <span className="text-lg font-bold text-ascone-primary">$25,000</span>
@@ -94,15 +73,9 @@ export function Features() {
                 <span aria-hidden="true">🌍</span>
               </div>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            variants={blockVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-40px" }}
-            className="lg:col-span-1"
-          >
+          <div className="lg:col-span-1">
             <h3 className="text-xl font-semibold text-ascone-navy">Make your spend, Well-spent</h3>
             <p className="mt-2 text-ascone-navy/70">
               Transparency, control, and growth—all in one place.
@@ -125,7 +98,7 @@ export function Features() {
                 icon={<IconLock />}
               />
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

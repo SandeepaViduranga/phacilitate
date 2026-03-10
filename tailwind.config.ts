@@ -9,7 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Helvetica", "Arial", "sans-serif"],
+        sans: ["var(--font-sans)", "Helvetica", "Arial", "sans-serif"],
+        serif: ["var(--font-playfair)", "Georgia", "serif"],
       },
       colors: {
         ascone: {

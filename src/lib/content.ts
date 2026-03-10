@@ -1,8 +1,8 @@
 export const NAV_LINKS = [
   { label: "Features", href: "#features" },
-  { label: "Account", href: "#account" },
-  { label: "Careers", href: "#careers" },
-  { label: "Help", href: "#help" },
+  { label: "Accounts", href: "#account" },
+  { label: "Company", href: "#company" },
+  { label: "Insight", href: "#insight" },
 ];
 
 export const PARTNERS = [

@@ -7,16 +7,26 @@ import { Logo } from "./Logo";
 import { Button } from "./Button";
 import { NAV_LINKS } from "@/lib/content";
 
+function ArrowRightIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M5 12h14M12 5l7 7-7 7" />
+    </svg>
+  );
+}
+
 export function Header() {
+  // mobile nav open/close
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-ascone-light-grey/50 bg-white/95 backdrop-blur-sm">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
-        <Logo />
+        <div className="flex items-center gap-8 lg:gap-12">
+          <Logo />
 
-        <nav className="hidden items-center gap-8 md:flex" aria-label="Main">
-          {NAV_LINKS.map((link) => (
+          <nav className="hidden items-center gap-8 md:flex md:justify-start" aria-label="Main">
+            {NAV_LINKS.map((link) => (
             <Link
               key={link.label}
               href={link.href}
@@ -25,7 +35,8 @@ export function Header() {
               {link.label}
             </Link>
           ))}
-        </nav>
+          </nav>
+        </div>
 
         <div className="hidden items-center gap-4 md:flex">
           <Link
@@ -34,7 +45,9 @@ export function Header() {
           >
             Login
           </Link>
-          <Button href="#signup">Sign-Up</Button>
+          <Button href="#signup" className="inline-flex items-center gap-1.5">
+            Sign Up <ArrowRightIcon className="h-4 w-4" />
+          </Button>
         </div>
 
         <button
@@ -85,7 +98,7 @@ export function Header() {
                   Login
                 </Link>
                 <Button href="#signup" className="w-full justify-center">
-                  Sign-Up
+                  Sign Up →
                 </Button>
               </div>
             </nav>
