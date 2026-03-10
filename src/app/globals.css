@@ -12,3 +12,16 @@
 body {
   font-family: Helvetica, Arial, sans-serif;
 }
+
+@keyframes partners-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.partners-track {
+  animation: partners-marquee 35s linear infinite;
+}

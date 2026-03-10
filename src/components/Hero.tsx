@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "./Button";
@@ -41,14 +40,6 @@ function GlobeIcon() {
           <ellipse cx="12" cy="12" rx="9" ry="7" />
         </g>
       </g>
-    </svg>
-  );
-}
-
-function StarIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
     </svg>
   );
 }
@@ -99,9 +90,8 @@ export function Hero() {
             Change the way you use your{" "}
             <span className="font-serif tracking-tight font-semibold/80 italic">money</span>
           </h1>
-          <p className="mt-20 text-lg text-ascone-navy/50">
-            From your everyday spending to savings and investments, Ascone helps
-            you manage your money in one place—savings, investments, and credit.
+          <p className="mt-20 text-lg text-ascone-navy/50 pr-20">
+            From your everyday spending, to planning for your future with savings and investments, Ascone helps you get more from your money.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
             <Button href="#get-started">Get Started Now</Button>
@@ -156,39 +146,39 @@ export function Hero() {
           {/* Bottom left: two teal star icons */}
           <div className="flex aspect-square flex-col justify-between rounded-tr-[50%] gap-2 bg-ascone-light-grey p-8">
             <div className="flex gap-2 text-ascone-primary">
-              <DoubleSparkleIcon/>
+              <DoubleSparkleIcon />
             </div>
             <span className="text-xl font-medium text-ascone-primary mr-5 text-right">
               Users Active
             </span>
             <div className="flex items-center -space-x-5">
-                {/* Three circular profile images - add your images to public/images/ as avatar-1.jpg, avatar-2.jpg, avatar-3.jpg */}
-                <img
-                  src="/images/avatar-1.jpg"
-                  alt=""
-                  className="h-[60px] w-[60px] rounded-full border-2 border-white object-cover bg-ascone-light-grey"
-                />
-                <img
-                  src="/images/avatar-2.jpg"
-                  alt=""
-                  className="h-[60px] w-[60px] rounded-full border-2 border-white object-cover bg-ascone-light-grey"
-                />
-                <img
-                  src="/images/avatar-3.jpg"
-                  alt=""
-                  className="h-[60px] w-[60px] rounded-full border-2 border-white object-cover bg-ascone-light-grey"
-                />
-                {/* Arrow circle - dark green with white arrow */}
-                <a
-                  href="#"
-                  className="flex h-[60px] w-[60px] flex-shrink-0 items-center justify-center rounded-full border-2 border-white bg-ascone-primary text-white transition-opacity hover:opacity-90"
-                  aria-label="View more"
-                >
-                  <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-                    <path d="M7 17L17 7M17 7h-6M17 7v6" />
-                  </svg>
-                </a>
-              </div>
+              {/* Three circular profile images - add your images to public/images/ as avatar-1.jpg, avatar-2.jpg, avatar-3.jpg */}
+              <img
+                src="/images/avatar-1.jpg"
+                alt=""
+                className="h-[60px] w-[60px] rounded-full border-2 border-white object-cover bg-ascone-light-grey"
+              />
+              <img
+                src="/images/avatar-2.jpg"
+                alt=""
+                className="h-[60px] w-[60px] rounded-full border-2 border-white object-cover bg-ascone-light-grey"
+              />
+              <img
+                src="/images/avatar-3.jpg"
+                alt=""
+                className="h-[60px] w-[60px] rounded-full border-2 border-white object-cover bg-ascone-light-grey"
+              />
+              {/* Arrow circle - dark green with white arrow */}
+              <a
+                href="#"
+                className="flex h-[60px] w-[60px] flex-shrink-0 items-center justify-center rounded-full border-2 border-white bg-ascone-primary text-white transition-opacity hover:opacity-90"
+                aria-label="View more"
+              >
+                <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                  <path d="M7 17L17 7M17 7h-6M17 7v6" />
+                </svg>
+              </a>
+            </div>
           </div>
 
           {/* Bottom right: Saving card + Users Active below */}
@@ -198,7 +188,7 @@ export function Hero() {
           >
           </div>
         </motion.div>
-      </div>
-    </section>
+      </div>      
+    </section>    
   );
 }
