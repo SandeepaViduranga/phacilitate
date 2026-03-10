@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ["Helvetica", "Arial", "sans-serif"],
+        serif: ["Georgia", "Times New Roman", "serif"],
       },
       colors: {
         ascone: {
