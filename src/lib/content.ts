@@ -52,19 +52,19 @@ export const FEATURES_SPEND_ITEMS = [
   {
     title: "Transparency",
     description:
-      "Build your trust by providing transparent and secure solutions to your company",
+      "A departure from the industry norm of ambiguity, Montfort, as a public and finest company.",
     icon: "network",
   },
   {
     title: "Creative expansion",
     description:
-      "Build a robust and high performance platform for seamless and secure investments",
+      "Ascone proprietary fintech platform helps our subsidiaries locate and manage investments.",
     icon: "circles",
   },
   {
     title: "Private Credit investments",
     description:
-      "Receive access to unique and secure investments, at market rates and at competitive margins perfectly",
+      "We provide access to unique private credit investments; a rare but valuable part of a sound investment portfolio.",
     icon: "arrow-circle",
     variant: "cream" as const,
   },

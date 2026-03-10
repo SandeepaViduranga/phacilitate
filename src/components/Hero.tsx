@@ -85,7 +85,7 @@ export function Hero() {
           transition={{ duration: 0.4 }}
           className="max-w-xl"
         >
-          <p className="text-lg font-medium text-ascone-primary/80 uppercase pb-6">Try it now!</p>
+          <p className="text-md font-semibold text-ascone-primary/70 uppercase pb-6">Try it now!</p>
           <h1 className="text-7xl font-semibold/80 tracking-tight text-ascone-navy">
             Change the way you use your{" "}
             <span className="font-serif tracking-tight font-semibold/80 italic">money</span>
