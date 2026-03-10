@@ -20,32 +20,32 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-ascone-light-grey/50 bg-white/95 backdrop-blur-sm">
+    <header className="sticky top-0 z-50 w-full border-b border-ascone-light-grey/50 bg-white">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-8 lg:gap-12">
           <Logo />
 
           <nav className="hidden items-center gap-8 md:flex md:justify-start" aria-label="Main">
             {NAV_LINKS.map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
-              className="text-sm font-medium text-ascone-navy transition-colors hover:text-ascone-primary"
-            >
-              {link.label}
-            </Link>
-          ))}
+              <Link
+                key={link.label}
+                href={link.href}
+                className="text-sm font-medium text-ascone-navy transition-colors hover:text-ascone-primary"
+              >
+                {link.label}
+              </Link>
+            ))}
           </nav>
         </div>
 
-        <div className="hidden items-center gap-4 md:flex">
+        <div className="hidden items-center gap-6 md:flex">
           <Link
             href="#login"
             className="text-sm font-medium text-ascone-navy transition-colors hover:text-ascone-primary"
           >
             Login
           </Link>
-          <Button href="#signup" className="inline-flex items-center gap-1.5">
+          <Button href="#signup" className="inline-flex items-center gap-1.5 rounded-full">
             Sign Up <ArrowRightIcon className="h-4 w-4" />
           </Button>
         </div>
@@ -92,13 +92,13 @@ export function Header() {
               <div className="mt-4 flex flex-col gap-2 border-t border-ascone-light-grey/50 pt-4">
                 <Link
                   href="#login"
-                  className="rounded-lg px-3 py-2 text-sm font-medium text-ascone-navy hover:bg-ascone-light-grey/50"
+                  className="rounded-lg px-3 py-2 text-center text-sm font-medium text-ascone-navy hover:bg-ascone-light-grey/50"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Login
                 </Link>
-                <Button href="#signup" className="w-full justify-center">
-                  Sign Up →
+                <Button href="#signup" className="w-full justify-center rounded-full" onClick={() => setMobileMenuOpen(false)}>
+                  Sign Up <ArrowRightIcon className="inline h-4 w-4" />
                 </Button>
               </div>
             </nav>

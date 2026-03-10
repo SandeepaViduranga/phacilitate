@@ -29,16 +29,19 @@ export function AccordionItem({
       <button
         type="button"
         onClick={onToggle}
-        className="flex w-full items-center justify-between py-5 text-left font-medium text-ascone-navy hover:text-ascone-primary focus:outline-none focus:ring-2 focus:ring-ascone-primary/30 focus:ring-offset-2"
+        className="flex w-full items-center justify-between gap-4 py-5 text-left font-medium text-ascone-navy hover:text-ascone-primary focus:outline-none focus:ring-2 focus:ring-ascone-primary/30 focus:ring-offset-2"
         aria-expanded={isOpen}
       >
         <span>{question}</span>
         <motion.span
-          animate={{ rotate: isOpen ? 45 : 0 }}
+          animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.2 }}
-          className="text-2xl leading-none text-ascone-primary"
+          className="flex-shrink-0 text-ascone-primary"
+          aria-hidden
         >
-          +
+          <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M6 9l6 6 6-6" />
+          </svg>
         </motion.span>
       </button>
       <AnimatePresence initial={false}>

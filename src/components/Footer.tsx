@@ -10,7 +10,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-1">
-            <Logo />
+            <Logo className="text-3xl sm:text-4xl" />
           </div>
           {Object.entries(FOOTER_LINKS).map(([heading, links]) => (
             <div key={heading}>
@@ -44,7 +44,7 @@ export function Footer() {
               Terms of Use
             </Link>
             <Link href="#" className="text-ascone-navy/60 hover:text-ascone-primary">
-              Disclaimer
+              Disclosure
             </Link>
           </div>
         </div>
@@ -54,7 +54,7 @@ export function Footer() {
             className="flex items-center gap-2 rounded-lg border border-ascone-light-grey/50 px-3 py-2 text-sm text-ascone-navy/70 hover:bg-ascone-light-grey/30"
           >
             <span aria-hidden="true">🇺🇸</span>
-            English (US)
+            English
           </button>
         </div>
       </div>

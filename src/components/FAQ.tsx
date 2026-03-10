@@ -6,7 +6,7 @@ import { AccordionItem } from "./Accordion";
 import { FAQ_ITEMS } from "@/lib/content";
 
 export function FAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(1);
 
   return (
     <section className="bg-ascone-light-grey/20 px-4 py-16 sm:px-6 lg:px-8 lg:py-24">

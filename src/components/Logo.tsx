@@ -1,8 +1,10 @@
 import Link from "next/link";
 
-export function Logo() {
+type LogoProps = { className?: string };
+
+export function Logo({ className = "" }: LogoProps) {
   return (
-    <Link href="#" className="text-2xl font-semibold text-ascone-primary sm:text-3xl">
+    <Link href="#" className={`text-2xl font-semibold text-ascone-navy sm:text-3xl ${className}`.trim()}>
       Ascone
     </Link>
   );
