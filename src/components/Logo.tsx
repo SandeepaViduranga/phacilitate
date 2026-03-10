@@ -4,7 +4,7 @@ type LogoProps = { className?: string };
 
 export function Logo({ className = "" }: LogoProps) {
   return (
-    <Link href="#" className={`text-2xl font-semibold text-ascone-navy sm:text-3xl ${className}`.trim()}>
+    <Link href="#" className={`text-2xl font-medium text-ascone-primary sm:text-3xl tracking-tight ${className}`.trim()}>
       Ascone
     </Link>
   );

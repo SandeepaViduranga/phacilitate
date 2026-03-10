@@ -21,11 +21,11 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-ascone-light-grey/50 bg-white">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
-        <div className="flex items-center gap-8 lg:gap-12">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 py-4 px-4">
+        <div className="flex items-center gap-20">
           <Logo />
 
-          <nav className="hidden items-center gap-8 md:flex md:justify-start" aria-label="Main">
+          <nav className="hidden items-center gap-12 md:flex md:justify-start" aria-label="Main">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.label}
@@ -38,7 +38,7 @@ export function Header() {
           </nav>
         </div>
 
-        <div className="hidden items-center gap-6 md:flex">
+        <div className="hidden items-center gap-10 md:flex">
           <Link
             href="#login"
             className="text-sm font-medium text-ascone-navy transition-colors hover:text-ascone-primary"
